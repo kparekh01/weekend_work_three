@@ -1,5 +1,5 @@
-# In this exercise, we've already implemented the class, and you have to write the 
-# driver code. 
+# In this exercise, we've already implemented the class, and you have to write the
+# driver code.
 # This class represents a hotel reservation.
 
 class HotelReservation
@@ -32,3 +32,50 @@ end
 # The add_a_crib method
 # The add_a_custom_amenity method
 
+new_reservation = HotelReservation.new(customer_name: "Kenneth Parekh", date: "11/28/2017", room_number: 1202)
+puts "Your current room number is : #{new_reservation.room_number}"
+puts
+new_reservation.room_number = 2808
+if new_reservation.room_number == 2808
+  puts "Your new room number is : #{new_reservation.room_number}"
+  puts
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts
+puts "Currently your amenities are : #{new_reservation.amenities}"
+puts
+new_reservation.add_a_fridge
+if new_reservation.amenities == ["fridge"]
+  puts "Now your amenities are : #{new_reservation.amenities}"
+  puts
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts
+puts "Currently your amenities are : #{new_reservation.amenities}"
+puts
+new_reservation.add_a_crib
+if new_reservation.amenities == ["fridge", "crib"]
+  puts "Now your amenities are : #{new_reservation.amenities}"
+  puts
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts
+puts "Currently your amenities are : #{new_reservation.amenities}"
+puts
+new_reservation.add_a_custom_amenity("Wireless Internet")
+if new_reservation.amenities == ["fridge", "crib", "Wireless Internet"]
+  puts "Now your amenities are : #{new_reservation.amenities}"
+  puts
+  puts "PASS!"
+else
+  puts "F"
+end

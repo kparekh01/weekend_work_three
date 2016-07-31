@@ -3,7 +3,7 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-
+array[0] < array[1] ? (array[0]..array[1]).inject(:+) : array[0].downto(array[1]).inject(:+)
 end
 
 # Driver code - don't touch anything below this line.
